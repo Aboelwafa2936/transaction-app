@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Transactions</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" class="form-control" id="searchName" placeholder="Filter by customer name">
+            </div>
+            <div class="col-md-6">
+                <input type="number" class="form-control" id="searchAmount" placeholder="Filter by transaction amount">
+            </div>
+        </div>
+        <table class="table table-striped" id="customerTable">
+            <thead>
+                <tr>
+                    <th class="bg-dark text-white">Customer Name</th>
+                    <th class="bg-dark text-white">Transaction Date</th>
+                    <th class="bg-dark text-white">Transaction Amount</th>
+                    <th class="bg-dark text-white">Transaction Graph</th>
+                </tr>
+            </thead>
+            <tbody id="customerTableBody">
+            </tbody>
+        </table>
+        <canvas id="transactionChart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
