@@ -7,10 +7,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     let chart;
 
     // fetch local api
-    const response = await fetch('http://localhost:3000/api/data');
-    const data = await response.json();
-    const customers = data.customers;
-    const transactions = data.transactions;
+    const response = await fetch('https://nasal-cooperative-pentagon.glitch.me/transactions');
+    const transactions = await response.json();
+
+    const responseCustomers = await fetch('https://nasal-cooperative-pentagon.glitch.me/customers');
+    const customers = await responseCustomers.json();
 
     // display data inside the customer table
     function displayData(customers, transactions) {
